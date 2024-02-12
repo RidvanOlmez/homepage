@@ -21,6 +21,9 @@ body {
   overflow-x: hidden;
   font-family: "Poppins";
 }
+html{
+  scroll-behavior: smooth;
+}
 header {
   display: flex;
   align-items: center;
@@ -31,7 +34,9 @@ header {
   background-color: var(--black);
   z-index: 999;
 }
-
+h1,
+h2,
+h3,
 h4 {
   font-family: "inter";
   color: var(--white);
@@ -95,6 +100,7 @@ footer form input {
   padding: 5px 10px;
   border-radius: 10px;
   max-height: 50px;
+  outline: none;
 }
 footer .footer-home .footer-one {
   display: flex;
@@ -201,7 +207,260 @@ section {
   width: 200px;
 }
 
+/* list area */
+#list-sec{
+  margin: 50px 0;
+}
+
+#list-sec .info{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+#list-sec .info h2, .info p{
+  max-width: 400px;
+}
+#list-sec ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+#list-sec ul li img{
+  width: 50px;
+}
+#list-sec ul li h1 span{
+  color: gray;
+  font-weight: 150;
+  font-size: 15px;
+  margin-bottom: 8%px;
+}
+/*! projeler area */
+
+.welcome{
+  max-width: 1300px;
+  font-size: 56px;
+  padding: 100px;
+  background-image: linear-gradient(43deg, #4f41d0 0%, #c850ad 46%, #ffe370 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#what-sec {
+display: flex;
+justify-content: space-between;
+gap: 40px;
+}
+#what-sec .info{
+  max-width: 400px;
+}
+#what-sec .info h1{
+  margin-bottom: 50px;
+}
+#what-sec .cards{
+  display: flex;
+  gap: 100px;
+}
+#what-sec .cards .what-card{
+  min-width: 200px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  background-color: #323443;
+  border-radius: 10px;
+  padding: 30px 20px;
+  position: relative;
+}
+#what-sec .cards .what-card img{
+  
+  position: absolute;
+  width: 50px;
+  top: -50px;
+}
+
+/* Project Page */
+#projects-sec{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#projects-sec .project{
+  display: flex;
+  gap: 30px;
+}
+.project-image{
+  display: flex;
+  align-items: end;
+  background: #323443;
+  position: relative;
+  padding: 40px 60px 1px;
+}
+.project-image:hover{
+  background: linear-gradient(45deg, #c899ff 0%, #43dce7 52%, #49f5a2 90%);
+  cursor: pointer;
+}
+.project-image .icon{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #414141;
+  display: flex;
+}
+.project-info{
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  gap: 30px;
+}
+/*! Takim Sayfasi */
+#count-sec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.count-sec-left{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.count-sec-left .counter{
+  padding: 20px;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.4px);
+-webkit-backdrop-filter: blur(2.4px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.counter .boxes{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  margin-top: 20px;
+}
+.boxes .box{
+  background-color: #000115;
+  padding: 10px;
+ text-align: center ;
+ border-radius: 10px;
+}
+.count-sec-left .buttons{
+  display: flex;
+  gap: 20px;
+}
+.count-sec-left .buttons button{
+  background-color: transparent;
+  color: white;
+  border: 1px solid var(--green);
+}
+.count-sec-left .buttons button:hover{
+  background-color: #30a900;
+}
+.count-sec-right img{
+  border-radius: 10px;
+}
+
+/*! Photos */
+#images-sec{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.img-wrapper{
+  position: relative;
+}
+.img-wrapper img{
+  width: 400px;
+  border-radius: 20px;
+}
+.img-wrapper h1{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.4px);
+-webkit-backdrop-filter: blur(2.4px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+
+
+/*! Donate Area */
+#donate-sec{
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.donate-sec-info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.donate-sec-content{
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  gap: 40px;
+}
+.donate-sec-people{
+  display: flex;
+  color: white;
+  background: #640863;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 60px;
+}
+.donate-sec-people img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* responsive */
+@media (max-width: 1500px) {
+  #images-sec{
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  #images-sec img{
+    width: 400px;
+  }
+
+
+
+
+
+
+}
+
 @media (max-width: 1200px) {
   .room-all {
     flex-direction: column;
@@ -210,6 +469,35 @@ section {
   .first {
     height: 300px;
   }
+  #what-sec{
+    flex-direction: column;
+    gap: 50px;
+  }
+  #what-sec .info{
+    display: flex;
+    gap: 20px;
+    max-width: unset !important;
+  }
+  #what-sec .info p{
+    max-width: unset;
+  }
+  #what-sec .info h1{
+    white-space: nowrap;
+  }
+  /* projeler  */
+  #projects-sec .project{
+    flex-direction: column-reverse;
+  }
+  #projects-sec .project-image{
+    justify-content: center;
+    padding: 20px 20px 0;
+  }
+
+
+
+
+
+
 }
 
 @media (max-width: 1000px) {
@@ -230,6 +518,22 @@ section {
   .card{
     max-width: 400px;
   }
+  .welcome{
+    padding: 100px 20px;
+    font-size: 40px;
+  }
+  /* bagis */
+  .donate-sec-content{
+    grid-template-columns: repeat(3, 200px);
+  }
+
+
+
+
+
+
+
+
 }
 
 @media (max-width: 800px) {
@@ -250,11 +554,55 @@ section {
     border-radius: 20px;
     width: auto;
   }
+  .toggle a:hover{
+    color: var(--green);
+  }
   /* home Area */
   .home {
     align-items: center;
     justify-content: center;
   }
+  .home-one{
+    margin: 40px;
+  }
+  /* list area */
+  #list-sec{
+    padding: 30px;
+  }
+  #list-sec .info{
+    flex-direction: column;
+  }
+  #list-sec .info h2, .info p{
+    max-width: unset;
+  }
+  #what-sec{
+    flex-direction: column;
+  }
+  #what-sec .info{
+    margin-bottom: 40px;
+    flex-direction: column;
+  }
+  #what-sec .cards{
+    gap: 40px;
+  }
+  /* Team */
+  #count-sec{
+    flex-direction: column-reverse;
+  }
+  #count-sec .buttons{
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  /* bagis area */
+  .donate-sec-content{
+    grid-template-columns: repeat(2, 200px);
+  }
+
+
+
+
+
+
 }
 
 @media (max-width: 500px) {
@@ -263,10 +611,38 @@ section {
   }
   footer .footer-home {
     padding: 5px;
+    column-gap: 50px;
   }
+  .project-image{
+    padding: 0 30px !important;
+  }
+  .project-info{
+    margin-top: 70px;
+  }
+
+
+
+
+
+
+
+
+
 }
 @media (min-width: 1000px) {
   section {
     padding: 100px;
+  }
+}
+@media (max-width: 700px){
+  .room-two .first{
+    min-width: 150px;
+    
+  }
+}
+@media (max-width: 600px){
+  .room-two .first{
+    min-width: 100px;
+    
   }
 }
